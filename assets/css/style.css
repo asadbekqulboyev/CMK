@@ -1,0 +1,249 @@
+.header .container {
+  padding: 20px 20px 20px 41px;
+  border-radius: 25px;
+  background: #F3F5F6;
+  gap: 52px;
+}
+@media (max-width: 1400px) {
+  .header .container {
+    padding: 20px;
+    gap: 35px;
+  }
+}
+.header .container a {
+  color: #050E25;
+  font-family: "Tilda Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.2s linear;
+}
+@media (max-width: 1400px) {
+  .header .container a {
+    font-size: 16px;
+  }
+}
+.header .container a:hover {
+  color: #F3C733;
+}
+.header .container .catalog .bars {
+  display: block;
+}
+.header .container .catalog .bars.exit {
+  display: none;
+}
+.header .container .catalog.active .bars {
+  display: none;
+}
+.header .container .catalog.active .bars.exit {
+  display: block;
+}
+.header .container .subcatalog {
+  position: fixed;
+  left: 0;
+  top: 120px;
+  width: 100%;
+  display: none;
+}
+.header .container .subcatalog .container {
+  padding: 20px;
+  border-radius: 25px;
+  background: #F3F5F6;
+}
+.header .container .subcatalog li {
+  width: 33%;
+}
+.header .container .subcatalog li a {
+  padding: 8px;
+  width: 100%;
+  display: block;
+}
+.header nav {
+  width: 100%;
+}
+.header_menulist {
+  gap: 45px;
+}
+@media (max-width: 1650px) {
+  .header_menulist {
+    gap: 25px;
+  }
+}
+@media (max-width: 1400px) {
+  .header_menulist {
+    gap: 15px;
+  }
+}
+.header_menulist > li:first-child {
+  margin-left: 0;
+}
+.header_menulist > li:nth-child(2) {
+  margin-left: 0;
+}
+.header_menulist > li {
+  margin-left: 26px;
+}
+@media (max-width: 1650px) {
+  .header_menulist > li {
+    margin-left: 0;
+  }
+}
+.header .header_contact {
+  gap: 40px;
+}
+@media (max-width: 1650px) {
+  .header .header_contact {
+    gap: 20px;
+  }
+}
+.header .header_contact .tel {
+  color: #050E25;
+  font-family: "Tilda Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+@media (max-width: 1400px) {
+  .header .header_contact .tel {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+@media (max-width: 1400px) {
+  .header .header_contact .button {
+    padding: 25px 36px;
+  }
+}
+@media (max-width: 1200px) {
+  .header .header_contact .button {
+    padding: 20px 27px;
+  }
+}
+
+@font-face {
+  font-family: "Tilda Sans";
+  src: url(../fonts/TildaSans-VF.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #E5EAED;
+  font-family: "Tilda Sans";
+  padding: 20px 50px;
+}
+@media (max-width: 1650px) {
+  body {
+    padding: 20px 20px;
+  }
+}
+@media (max-width: 556px) {
+  body {
+    padding: 10px 10px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section_title {
+  color: #050E25;
+  font-family: "Tilda Sans";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 90%; /* 72px */
+}
+
+.button {
+  display: flex;
+  width: fit-content;
+  gap: 18px;
+  align-items: center;
+  border-radius: 25px;
+  padding: 30px 56px;
+  text-decoration: none;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.button span {
+  color: #30C687;
+  font-family: "Tilda Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.button.catalog {
+  border-radius: 25px;
+  background: #F3C733;
+  padding: 24px 40px 22px 33px;
+  color: #050E25;
+  font-family: "Tilda Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 1400px) {
+  .button.catalog {
+    padding: 24px 25px 22px 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .button.catalog {
+    padding: 16px 17px 14px 16px;
+  }
+}
+.button:hover {
+  transform: scale(0.97);
+}
+
+.container {
+  max-width: 1820px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+.flex.between {
+  justify-content: space-between;
+}
+.flex.center {
+  justify-content: center;
+}
+.flex.end {
+  justify-content: flex-end;
+}
+.flex.start {
+  justify-content: flex-start;
+}
+.flex.column {
+  flex-direction: column;
+}
+.flex.a_center {
+  align-items: center;
+}
+.flex.a_start {
+  align-items: flex-start;
+}
+.flex.a_end {
+  align-items: flex-end;
+}
+.flex.wrap {
+  flex-wrap: wrap;
+}/*# sourceMappingURL=style.css.map */

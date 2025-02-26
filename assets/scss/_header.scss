@@ -1,0 +1,118 @@
+.header{
+    .container{
+        padding: 20px 20px 20px 41px ;
+        border-radius: 25px;
+        background: #F3F5F6;
+        gap: 52px;
+        @media (max-width:1400px) {
+          padding: 20px;
+          gap: 35px;
+        }
+        a{
+            color: #050E25;
+            font-family: "Tilda Sans";
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: all .2s linear;
+            @media (max-width:1400px) {
+                font-size: 16px;
+              }
+            &:hover{
+                color: #F3C733;
+            }
+        }
+        .catalog{ 
+            .bars{
+                display: block;
+                &.exit{
+                display: none;
+                }
+            }
+            &.active{
+                .bars{
+                    display: none;
+                    &.exit{
+                    display: block;
+                    }
+                }
+            }
+        }
+        .subcatalog{
+            position: fixed;
+            left: 0;
+            top: 120px;
+            width: 100%;
+            display: none;
+
+            .container{
+            padding: 20px;
+            border-radius: 25px;
+            background: #F3F5F6;
+
+            }
+            li{
+                width:33%;
+                a{
+                    padding: 8px;
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+    nav{
+        width: 100%;
+    }
+    &_menulist{
+        gap: 45px;
+        @media (max-width:1650px) {
+           gap: 25px;
+         }
+         @media (max-width:1400px) {
+            gap: 15px;
+         }
+        &>li:first-child{
+            margin-left: 0;
+        }
+        &>li:nth-child(2){
+            margin-left: 0;
+        }
+        &>li{
+            margin-left:26px;
+            @media (max-width:1650px) {
+               margin-left: 0;
+            }
+        }
+        
+    }
+    .header_contact{
+        gap: 40px;
+        @media (max-width:1650px) {
+            gap: 20px;
+        }
+        .tel{
+            color: #050E25;
+            font-family: "Tilda Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            @media (max-width:1400px) {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+        .button{
+            @media (max-width:1400px) {
+                padding: 25px 36px;
+            }
+            @media (max-width:1200px) {
+                padding: 20px 27px;
+            }
+        }
+    }
+}

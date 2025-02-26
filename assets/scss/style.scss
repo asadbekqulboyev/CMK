@@ -1,0 +1,118 @@
+@import 'header';
+@font-face {
+    font-family: "Tilda Sans";
+    src: url(../fonts/TildaSans-VF.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #E5EAED;
+    font-family: "Tilda Sans";
+    padding: 20px 50px;
+    @media (max-width:1650px) {
+        padding: 20px 20px;
+    }
+    @media (max-width:556px) {
+        padding: 10px 10px;
+    }
+}
+a{text-decoration: none;}
+li{
+    list-style:none;
+}
+.section_title{
+color: #050E25;
+font-family: "Tilda Sans";
+font-size: 80px;
+font-style: normal;
+font-weight: 900;
+line-height: 90%; /* 72px */
+}
+.button{
+    display: flex;
+    width: fit-content;
+    gap: 18px;
+    align-items: center;
+    border-radius: 25px;
+    padding: 30px 56px;
+    text-decoration:none;
+    background: #fff;
+    cursor: pointer;
+    transition: all .2s linear  ;
+    span{
+        color: #30C687;
+        font-family: "Tilda Sans";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    
+    &.catalog{
+        border-radius: 25px;
+        background: #F3C733;
+        padding: 24px 40px 22px 33px;
+        color: #050E25;
+        font-family: "Tilda Sans";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        @media (max-width:1400px) {
+            padding: 24px 25px 22px 20px;
+        }
+        @media (max-width:1200px) {
+            padding: 16px 17px 14px 16px;
+        }
+    }
+    &:hover{
+        transform: scale(.97);
+    }
+}
+.container{
+    max-width: 1820px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+
+    &.between {
+        justify-content: space-between;
+    }
+
+    &.center {
+        justify-content: center;
+    }
+
+    &.end {
+        justify-content: flex-end;
+    }
+
+    &.start {
+        justify-content: flex-start;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.a_center {
+        align-items: center;
+    }
+
+    &.a_start {
+        align-items: flex-start;
+    }
+
+    &.a_end {
+        align-items: flex-end;
+    }
+    &.wrap{
+        flex-wrap: wrap;
+    }
+
+
+}
