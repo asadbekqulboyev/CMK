@@ -400,6 +400,11 @@ main .hero .mobile_images {
     width: 100%;
   }
 }
+@media (max-width: 395px) {
+  main .hero .mobile_images {
+    padding: 25px 25px;
+  }
+}
 main .hero_subtitle {
   color: #050E25;
   font-family: "Tilda Sans";
@@ -487,6 +492,16 @@ main .hero_bottom {
     padding: 0px 30px 42px 40px;
   }
 }
+@media (max-width: 395px) {
+  main .hero_bottom {
+    padding: 0px 20px 32px 20px;
+  }
+}
+@media (max-width: 365px) {
+  main .hero_bottom {
+    font-size: 16px;
+  }
+}
 main .hero_bottom .button {
   padding: 23px 39px 23px 52px;
 }
@@ -501,6 +516,15 @@ main .hero_bottom .button {
 @media (max-width: 556px) {
   main .hero_bottom .button {
     padding: 23px 8px 23px 30px;
+  }
+}
+@media (max-width: 365px) {
+  main .hero_bottom .button {
+    padding: 19px 8px 17px 20px;
+    gap: 8px;
+  }
+  main .hero_bottom .button span {
+    font-size: 18px !important;
   }
 }
 main .hero_bottom .button img {
@@ -961,6 +985,391 @@ main .hero .slick-list.draggable {
   .catalog_section .catalog_item .button {
     padding: 32px 30px;
   }
+}
+
+.advantages {
+  margin-top: 98px;
+}
+@media (max-width: 1400px) {
+  .advantages .section_title {
+    font-size: 60px;
+  }
+}
+@media (max-width: 556px) {
+  .advantages .section_title {
+    font-size: 44px;
+  }
+}
+.advantages_items {
+  gap: 20px 0;
+}
+.advantages_item {
+  border-radius: 20px;
+  background: #FFF;
+  width: calc(20% - 10px);
+  height: 308px;
+  gap: 25px;
+}
+@media (max-width: 1400px) {
+  .advantages_item {
+    height: 248px;
+  }
+}
+@media (max-width: 1120px) {
+  .advantages_item {
+    width: calc(33.33% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .advantages_item {
+    width: calc(50% - 8px);
+    height: 190px;
+    gap: 10px 0;
+    border-radius: 16px;
+  }
+}
+.advantages_item img {
+  height: 120px;
+}
+@media (max-width: 1400px) {
+  .advantages_item img {
+    height: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .advantages_item img {
+    height: 68px;
+  }
+}
+.advantages_item:first-child {
+  background: none;
+  border-radius: 0;
+  width: calc(40% - 10px);
+}
+@media (max-width: 1120px) {
+  .advantages_item:first-child {
+    width: calc(66.66% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .advantages_item:first-child {
+    height: fit-content;
+    width: 100%;
+  }
+}
+.advantages_item:last-child {
+  background: none;
+  border-radius: 0;
+}
+.advantages_title {
+  color: #17191C;
+  text-align: center;
+  font-family: "Tilda Sans";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+  padding: 0 30px;
+}
+@media (max-width: 1400px) {
+  .advantages_title {
+    padding: 0 20px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .advantages_title {
+    padding: 0 8px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .advantages_title {
+    font-size: 14px;
+  }
+}
+
+.promotions {
+  padding-top: 72px;
+}
+.promotions .section_title {
+  text-align: center;
+}
+.promotions_content {
+  position: relative;
+  margin-top: 50px;
+}
+.promotions_content .promotions_slider {
+  padding: 0 35px;
+  position: relative;
+  z-index: 7;
+}
+@media (max-width: 768px) {
+  .promotions_content .promotions_slider {
+    padding: 0 15px;
+  }
+}
+.promotions_content .promotions_slider .promotions_img {
+  border-radius: 25px;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1120px) {
+  .promotions_content .promotions_slider .promotions_img {
+    height: 560px;
+  }
+}
+@media (max-width: 556px) {
+  .promotions_content .promotions_slider .promotions_img {
+    height: 510px;
+  }
+}
+.promotions_button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 100%;
+  left: 0;
+}
+.promotions_button .promotions_btn {
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+}
+@media (max-width: 768px) {
+  .promotions_button .promotions_btn img {
+    width: 40px;
+  }
+}
+.promotions_button .promotions_btn:first-child {
+  transform: rotate(-180deg);
+}
+.promotions_title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Tilda Sans";
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 90%;
+}
+@media (max-width: 768px) {
+  .promotions_title {
+    font-size: 44px;
+  }
+}
+.promotions .slide_info_cart {
+  position: absolute;
+  top: 0;
+  padding: 95px 65px 110px;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 9;
+}
+@media (max-width: 1200px) {
+  .promotions .slide_info_cart {
+    padding: 45px 65px 40px;
+  }
+}
+@media (max-width: 1120px) {
+  .promotions .slide_info_cart {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .promotions .slide_info_cart {
+    padding: 45px 15px 40px;
+  }
+}
+@media (max-width: 556px) {
+  .promotions .slide_info_cart {
+    padding: 45px 0px 40px;
+  }
+}
+.promotions .slide_item {
+  position: relative;
+}
+.promotions .sales_cart {
+  width: fit-content;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(100px);
+  padding: 57px 20px 20px 20px;
+  border-radius: 25px;
+  transition: all 0.2s linear;
+}
+@media (max-width: 1400px) {
+  .promotions .sales_cart {
+    padding: 47px 20px 20px 20px;
+  }
+}
+@media (max-width: 1140px) {
+  .promotions .sales_cart {
+    margin: 10px auto;
+    width: calc(100% - 20px);
+  }
+}
+@media (max-width: 556px) {
+  .promotions .sales_cart {
+    padding: 40px 10px 20px 10px;
+    border-radius: 10px;
+  }
+}
+.promotions .sales_cart .cart_top {
+  padding: 0 30px 27px;
+}
+@media (max-width: 1400px) {
+  .promotions .sales_cart .cart_top {
+    padding: 0 18px 17px;
+  }
+}
+.promotions .sales_cart .cart_top .cart_sum {
+  color: #F3C733;
+  font-family: "Tilda Sans";
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 90%;
+}
+@media (max-width: 1655px) {
+  .promotions .sales_cart .cart_top .cart_sum {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1400px) {
+  .promotions .sales_cart .cart_top .cart_sum {
+    font-size: 24px;
+  }
+}
+.promotions .sales_cart .cart_top .cart_nosum {
+  color: #8E8E8E;
+  font-family: "Tilda Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 90%;
+  text-decoration: line-through;
+}
+@media (max-width: 1655px) {
+  .promotions .sales_cart .cart_top .cart_nosum {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1400px) {
+  .promotions .sales_cart .cart_top .cart_nosum {
+    font-size: 16px;
+  }
+}
+.promotions .sales_cart .cart_btn {
+  border-radius: 25px;
+  border: 1px solid rgba(255, 231, 231, 0.1);
+  justify-content: space-between;
+  align-items: center;
+}
+.promotions .sales_cart .cart_btn .cart_btn_info {
+  gap: 30px;
+  padding-left: 30px;
+}
+@media (max-width: 1400px) {
+  .promotions .sales_cart .cart_btn .cart_btn_info {
+    padding-left: 15px;
+    gap: 15px;
+  }
+}
+.promotions .sales_cart .cart_btn .cart_btn_info .flex {
+  align-items: center;
+  gap: 8px;
+  color: #FFF;
+  font-family: "Tilda Sans";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+}
+@media (max-width: 1140px) {
+  .promotions .sales_cart .cart_btn .cart_btn_info .flex {
+    font-size: 16px;
+  }
+}
+.promotions .sales_cart .cart_btn .cart_btn_info img {
+  width: 12px;
+  height: 12px;
+}
+.promotions .sales_cart .cart_btn a {
+  padding: 23px;
+  border-radius: 25px;
+  background: #F3C733;
+  width: 103px;
+  height: 103px;
+}
+@media (max-width: 1655px) {
+  .promotions .sales_cart .cart_btn a {
+    width: 93px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 1400px) {
+  .promotions .sales_cart .cart_btn a {
+    width: 63px;
+    height: 63px;
+    padding: 10px;
+  }
+}
+@media (max-width: 556px) {
+  .promotions .sales_cart .cart_btn a {
+    width: 53px;
+    height: 53px;
+    border-radius: 16px;
+    padding: 10px;
+  }
+  .promotions .sales_cart .cart_btn a img {
+    width: 40px;
+  }
+}
+
+.about {
+  margin-top: 97px;
+}
+.about .container {
+  border-radius: 25px;
+  background: #F5F5F5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding-left: 152PX;
+}
+.about_info {
+  width: calc(40% - 33px);
+}
+.about_info .about_title {
+  color: #17191C;
+  font-family: "Tilda Sans";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 90%;
+}
+.about_info .about_title span {
+  color: #F3C733;
+}
+.about .about_img {
+  width: calc(60% - 33px);
+  position: relative;
+  padding-right: 140px;
+}
+.about .slide_about {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.about .slide_item {
+  padding: 60px;
+  border-radius: 10px;
+  background: #FFF;
+  margin-right: 20px;
 }
 
 @font-face {
