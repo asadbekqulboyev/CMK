@@ -1,0 +1,195 @@
+.sales {
+    margin-top: 106px;
+    @media (max-width:1140px) {
+        margin-top: 50px;
+    }
+    .big_title {
+        top: -45px;
+        width: 120%;    
+        @media (max-width:1850px) {
+            font-size: 230px;
+        }
+        @media (max-width:1400px) {
+            font-size: 180px;
+        }
+        @media (max-width:1220px) {
+            font-size: 160px;
+            top: -30px;
+        }
+        @media (max-width:768px) {
+            top: 40px;
+            font-size: 97px;
+        }
+    }
+
+    .container {
+        position: relative;
+    }
+
+    &_items {
+        margin-top: 57px;
+        position: relative;
+        z-index: 2;
+        @media (max-width:1140px) {
+            gap: 21px 0;
+        }
+        @media (max-width:768px) {
+            margin-top: 35px;
+        }
+    }
+
+    &_item {
+        width: calc(33.33% - 11px);
+        position: relative;
+        cursor: pointer;
+        transition: all .2s linear;
+        @media (max-width:1140px) {
+            width:100%;
+        }
+        .sales_img{
+            border-radius: 25px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         
+        }
+        &:hover {
+            .sales_img {
+                box-shadow: 0 10px 30px #0000005b;
+
+            }
+            .sales_cart {
+                transform: scale(1);
+            }
+        }
+        .sales_cart {
+            width: calc(100% - 40px);
+            margin: 20px auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.10);
+            backdrop-filter: blur(100px);
+            padding: 57px  20px 20px 20px;
+            border-radius: 25px;
+            transform: scale(0);
+            transition: all .2s linear;
+            @media (max-width:1400px) {
+                padding: 47px  20px 20px 20px;
+            }
+            @media (max-width:1140px) {
+                margin: 10px auto;
+                width: calc(100% - 20px);
+            }
+            .cart_top{
+                padding: 0 30px 27px;
+                @media (max-width:1400px) {
+                    padding: 0 18px 17px;
+                }
+                .cart_sum{
+                    color: #F3C733;
+                    font-family: "Tilda Sans";
+                    font-size: 44px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 90%;
+                    @media (max-width:1655px) {
+                        font-size: 32px;
+                    }
+                    @media (max-width:1400px) {
+                        font-size: 24px;
+                    }
+                }
+                .cart_nosum{
+                    color: #8E8E8E;
+                    font-family: "Tilda Sans";
+                    font-size: 34px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 90%;
+                    text-decoration: line-through;
+                    @media (max-width:1655px) {
+                        font-size: 22px;
+                    }
+                    @media (max-width:1400px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .cart_btn{
+                border-radius: 25px;
+                border: 1px solid rgba(255, 231, 231, 0.10);
+                justify-content: space-between;
+                align-items: center;
+                .cart_btn_info{
+                    gap: 30px;
+                    padding-left: 30px;
+                    @media (max-width:1400px) {
+                        padding-left: 15px;
+                        gap: 15px;
+                    }
+                    .flex{
+                        align-items: center;
+                        gap: 8px;
+                        color: #FFF;
+                        font-family: "Tilda Sans";
+                        font-size: 21px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 115%; 
+                        @media (max-width:1140px) {
+                            font-size: 16px;
+                        }
+                    }
+                    img{
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+                a{
+                    padding: 23px;
+                    border-radius: 25px;
+                    background: #F3C733;
+                    width: 103px;
+                    height: 103px;
+                    @media (max-width:1655px) {
+                        width: 93px;
+                        height: 93px;   
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    @media (max-width:1400px) {
+                        width: 63px;
+                        height: 63px;   
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+
+        .sales_title {
+            color: #FFF;
+            font-family: "Tilda Sans";
+            font-size: 54px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 90%;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            bottom: 0;
+            padding: 30px 52px 56px 72px;
+            width: 100%;
+            @media (max-width:1400px) {
+                font-size: 44px;
+                padding: 30px 32px 56px 32px; 
+            }
+            @media (max-width:1140px) {
+                font-size: 44px;
+                padding: 20px 22px 36px 22px; 
+            }
+        }
+    }
+}

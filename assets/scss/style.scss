@@ -1,4 +1,8 @@
 @import 'header';
+@import 'main';
+@import 'sales';
+@import 'catalog';
+
 @font-face {
     font-family: "Tilda Sans";
     src: url(../fonts/TildaSans-VF.ttf);
@@ -7,6 +11,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.wrapper{
+overflow: hidden;
 }
 body{
     background: #E5EAED;
@@ -29,7 +36,23 @@ font-family: "Tilda Sans";
 font-size: 80px;
 font-style: normal;
 font-weight: 900;
-line-height: 90%; /* 72px */
+line-height: 90%; 
+@media (max-width:1120px) {
+    font-size: 54px;
+}
+@media (max-width:556px) {
+    font-size: 44px;
+}
+}
+.big_title{
+    color: #0C1C2B;
+    font-family: "Tilda Sans";
+    font-size: 300px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 90%; 
+    opacity: .05;
+    position: absolute;
 }
 .button{
     display: flex;
@@ -75,6 +98,12 @@ line-height: 90%; /* 72px */
 .container{
     max-width: 1820px;
     margin: 0 auto;
+    @media (max-width:1120px) {
+        max-width: 768px;
+    }
+    @media (max-width:768px) {
+        max-width: 556px;
+    }
 }
 .flex {
     display: flex;

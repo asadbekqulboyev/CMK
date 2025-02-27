@@ -1,12 +1,50 @@
 .header{
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+    left: 0;
+    top: 20px;
+    padding: 0 50px;
+    transition: all .2s linear;
+    &.active{
+        top: 10px;
+        .container{
+        box-shadow: 0 100px 100px #00000054;
+        }
+    }
+    @media (max-width:1650px) {
+        padding: 0px 20px;
+    }
+    @media (max-width:556px) {
+        padding: 0px 10px;
+        top: 10px;
+    }
     .container{
         padding: 20px 20px 20px 41px ;
         border-radius: 25px;
         background: #F3F5F6;
         gap: 52px;
+        transition: all .2s linear;
         @media (max-width:1400px) {
           padding: 20px;
           gap: 35px;
+        }
+        @media (max-width:1200px) {
+            gap: 20px;
+        }
+        @media (max-width:768px) {
+            justify-content: space-between  ;
+         }
+        .logo{
+            img{
+                @media (max-width:1200px) {
+                    width: 120px;
+                }
+
+                @media (max-width:768px) {
+                    width: 123px;
+                }
+            }
         }
         a{
             color: #050E25;
@@ -38,32 +76,97 @@
                     }
                 }
             }
+            @media (max-width:768px) {
+               padding: 24px 32px 22px;
+            }
         }
+
         .subcatalog{
             position: fixed;
             left: 0;
-            top: 120px;
+            top: 160px;
             width: 100%;
             display: none;
-
+            padding: 0 50px;
+            @media (max-width:1650px) {
+                top: 157px;
+            }
+            @media (max-width:1650px) {
+                top: 147px;
+            }
+            @media (max-width:1650px) {
+                padding: 0 20px;
+            }
+            @media (max-width:556px ) {
+                padding: 0 10px;
+             }
             .container{
-            padding: 20px;
+            padding: 47px 40px;
             border-radius: 25px;
-            background: #F3F5F6;
-
+            background: #F3C733;
+            @media (max-width:556px) {
+                padding: 47px 20px; 
+            }
             }
             li{
                 width:33%;
+                @media (max-width:768px) {
+                    width: 50%;
+                }
                 a{
                     padding: 8px;
                     width: 100%;
                     display: block;
+                    &:hover{
+                        color: #fff;
+                    }
+                    @media (max-width:768px) {
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 700;
+                    }
+                    @media (max-width:400px) {
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .menu_links{
+                display: none;
+                @media (max-width:1120px) {
+                    display: flex;
+                    padding: 27px 0 32px;
+                    flex-wrap: wrap;
+                    border-top: 1px solid #00000021;
+                    border-bottom: 1px solid #00000021;
+                    margin-top: 29px;
+                }
+                li{
+                    @media (max-width:1120px) {
+                        width: 50%;
+                    }
+                    a{
+                        @media (max-width:768px) {
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 400;
+                        }
+                        @media (max-width:400px) {
+                            font-size: 18px;
+                            font-style: normal;
+                        }
+                    }
                 }
             }
         }
     }
     nav{
         width: 100%;
+
+        @media (max-width:768px) {
+           width: auto;
+        }
     }
     &_menulist{
         gap: 45px;
@@ -75,6 +178,9 @@
          }
         &>li:first-child{
             margin-left: 0;
+            @media(max-width:1120px) { 
+                display:flex;
+            }
         }
         &>li:nth-child(2){
             margin-left: 0;
@@ -84,13 +190,20 @@
             @media (max-width:1650px) {
                margin-left: 0;
             }
+            @media(max-width:1120px) { 
+                display:none;
+            }
         }
         
     }
     .header_contact{
         gap: 40px;
+       
         @media (max-width:1650px) {
             gap: 20px;
+        }
+        @media (max-width:768px) {
+            display: none;
         }
         .tel{
             color: #050E25;
@@ -105,6 +218,19 @@
                 font-weight: 700;
                 line-height: normal;
             }
+            @media (max-width:1200px) {
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+            }
+            @media (max-width:768px) {
+                &:hover{
+                    color: #fff;
+                }
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 900;
+            }
         }
         .button{
             @media (max-width:1400px) {
@@ -113,6 +239,21 @@
             @media (max-width:1200px) {
                 padding: 20px 27px;
             }
+            @media (max-width:768px) {
+                width: 100%;
+                padding: 30px 40px;
+                align-items: center;
+                justify-content: center;
+            }
         }
+
+        &.mobile_contakt{
+            display: none;
+         @media (max-width:768px) {
+            padding-top: 33px;
+                display: flex;
+                flex-direction: column;
+        }
+       }
     }
 }
