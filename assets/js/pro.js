@@ -79,6 +79,68 @@ $(document).ready(function(){
     });
     // forms
     $("input[type=tel]").inputmask("+7 (999)-999-99-99");
+    // modal
+    $('.hero_button ').click(function (e) {
+        e.preventDefault()
+        $('.modal').fadeIn()
+      })
+      $('.catalog_form ').click(function (e) {
+        e.preventDefault()
+        $('.modal_catalog').fadeIn()
+      })
+    
+    $(".exit_icon").click(function(){
+        $('.modal').fadeOut()
+        $('.modal_catalog').fadeOut()
+    })
+    // btnlists
+    $(".all_btn").on("click", function (e) {
+        e.preventDefault()
+        $(".hidden").slideToggle(); 
+        let text = $(this).text() === "Показать больше" ? "Скрите" : "Показать больше";
+        $(this).text(text);
+    });
+    // price
+    let slider = $("#price_slider").ionRangeSlider({
+        skin: "flat",
+        type: "double",
+        min: 0,
+        max: 1500000,
+        from: 0,
+        to: 1200000,
+        grid: false,
+        hide_min_max: true,
+        hide_from_to: true,
+        onChange: function (data) {
+            $(".min_price").text(data.from.toLocaleString() + " руб.");
+            $(".max_price").text(data.to.toLocaleString() + " руб.");
+        }
+    }).data("ionRangeSlider");
+
+    // Dastlabki qiymatlarni to'g'irlash
+    $(".min_price").text(slider.result.from.toLocaleString() + " руб.");
+    $(".max_price").text(slider.result.to.toLocaleString() + " руб.");
+
+    let slider2 = $("#price_slider_to").ionRangeSlider({
+        skin: "flat",
+        type: "double",
+        min: 0,
+        max: 1500000,
+        from:0,
+        to: 1200000,
+        grid: false,
+        hide_min_max: true,
+        hide_from_to: true,
+        onChange: function (data) {
+            $(".min_priceto").text(data.from.toLocaleString() + " руб.");
+            $(".max_priceto").text(data.to.toLocaleString() + " руб.");
+        }
+    }).data("ionRangeSlider");
+
+    // Dastlabki qiymatlarni to'g'irlash
+    $(".min_priceto").text(slider2.result.from.toLocaleString() + " руб.");
+    $(".max_priceto").text(slider2.result.to.toLocaleString() + " руб.");
+
 })
 $(window).scroll(function(){
     if ($(window).scrollTop() >= 5) {
