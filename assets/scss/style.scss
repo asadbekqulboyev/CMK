@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import '../fonts/style.css';
 @import 'header';
 @import 'main';
 @import 'sales';
@@ -5,6 +7,12 @@
 @import 'advantages';
 @import 'promotions';
 @import 'about';
+@import 'faq';
+@import 'blog';
+@import 'forms';
+@import 'fundament';
+@import 'products';
+@import 'footer';
 
 @font-face {
     font-family: "Tilda Sans";
@@ -16,7 +24,7 @@
     box-sizing: border-box;
 }
 .wrapper{
-overflow: hidden;
+overflow:unset;
 }
 body{
     background: #E5EAED;

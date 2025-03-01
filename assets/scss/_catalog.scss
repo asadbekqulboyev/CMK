@@ -109,3 +109,104 @@
         }
     }
 }
+.catalog_ral{
+    padding-top: 98px;
+    @media (max-width:768px){
+        padding-top: 45px;
+    }
+    .catalog_top_title{
+        .section_title{
+            text-align: center;
+        }
+        p{
+            color: #17191C;
+            text-align: center;
+            font-family: "Tilda Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 115%;
+            padding-top: 18px;
+            width: 100%;
+            max-width: 1116px;
+            margin: 0 auto;
+            @media (max-width:768px){
+                font-size: 16px;
+            }
+        }
+    }
+    .catalog_ral_items{
+        margin-top: 55px;
+        gap: 21px 0;
+        @media (max-width:768px){
+            margin-top: 25px;
+        }
+        .catalog_ral_item{
+            border-radius: 20px;
+            background: #FFF;
+            padding: 20px;
+            width: calc(33.33% - 10px);
+            transition: all .2s linear;
+            &:hover{
+                box-shadow: 0  0 20px #00000077;
+            }
+            @media (max-width:1120px) {
+                width: calc(50% - 10px);
+            }
+            @media (max-width:768px) {
+                width:100%;
+                border-radius: 12px;
+                padding: 15px 18px;
+            }
+        }
+        .catalog_title{
+            color: #17191C;
+            font-family: "Tilda Sans";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 115%; 
+            letter-spacing: -1.08px;
+            @media (max-width:1650px) {
+                font-size: 28px;
+            }
+            @media (max-width:1400px) {
+                font-size: 22px;
+            }
+            @media (max-width:768px){
+                font-size: 18px;
+            }
+        }
+        .catalog_color{
+            border-radius: 20px;
+            background: #D6C694;
+            width: 145px;
+            height: 177px;
+            @media (max-width:1650px) {
+                height: 147px;
+            }
+            @media (max-width:1400px) {
+                width: 132px;
+            }
+            @media (max-width:768px){
+                width: 100px;
+                height: 120px;
+            }
+        }
+    }
+    .button.catalog{
+        padding: 42px 52px;
+        color: #050E25;
+        font-family: "Tilda Sans";
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 90%; 
+        margin: 50px auto 0;
+        @media (max-width:768px) {
+            margin-top: 25px;
+            border-radius: 20px;
+            padding: 33px 43px;
+        }
+    }
+}

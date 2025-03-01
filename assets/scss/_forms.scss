@@ -1,0 +1,233 @@
+.forms{
+    padding-top: 120px;
+    @media (max-width:1120px) {
+        padding-top: 60px;
+    }
+    @media (max-width:556px) {
+        padding-top: 40px;
+        overflow: hidden;
+    }
+    .container{
+        border-radius: 25px;
+        background: #F3F5F6;
+        position: relative;
+        padding-top: 104px;
+        padding-left: 152px;
+
+        @media (max-width:1800px) {
+            padding-left: 70px;
+        }
+        @media (max-width:1400px) {
+            padding-left: 60px;
+        }
+        @media (max-width:1120px) {
+            flex-direction: column;
+            padding-top: 45px;
+            padding-left: 25px;
+            gap: 10px;
+
+        }
+        @media (max-width:768px) {
+            padding-left: 15px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .big_title{
+            color: #E5EAED;
+            font-family: "Tilda Sans";
+            font-size: 600px;
+            font-style: normal;
+            font-weight: 900;
+            opacity: 1;
+            line-height: 90%;
+            position: absolute;
+            left: -232px;
+            top: 90px;
+            z-index: 1;
+            @media (max-width:1400px) {
+                font-size: 380px;
+            }
+        }
+        .section_title{
+            text-align: center;
+            position: relative;
+            z-index: 4;
+            @media (max-width:1400px) {
+                font-size: 54px;
+            }
+            @media (max-width:768px) {
+                font-size: 28px;
+            }
+
+        }
+        .form_content{
+            width: 100%;
+            max-width: 810px;
+            position: relative;
+            padding-bottom: 52px;
+            @media (max-width:1400px) {
+                max-width: 714px;
+            }
+            @media (max-width:768px) {
+            padding-right: 15px;
+            padding-bottom: 20px;
+            }
+            form{
+                padding: 58px 0 38px;
+                position: relative;
+                z-index: 4;
+                @media (max-width:768px) {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+            textarea,input{
+                padding: 42px 52px 42px 24px;
+                width: 100%;
+                border-radius: 20px;
+                background: #FFF;
+                border: 0;
+                outline: none;
+                color: #17191C;
+                font-family: "Tilda Sans";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                @media (max-width:768px) {
+                    border-radius: 16px;
+                    padding: 32px 52px 32px 24px;
+                }
+            }
+            .form_item{
+                width: calc(50% - 10px);
+                position: relative;
+                gap: 20px;
+                @media (max-width:768px) {
+                    width: 100%;
+                }
+                img{
+                    position: absolute;
+                    top: 42px;
+                    right: 32px;
+                }
+                &:last-child{
+                    
+                    label{
+                        position: relative;
+                        img{
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto 0;
+                        } 
+                    }
+                    button{
+                        padding: 23px 28px 23px 52px;
+                        cursor: pointer;
+                        outline: none;
+                        border: 0;
+                        width: 100%;
+                        justify-content: center;
+                        @media (max-width:768px) {
+                            padding: 16px 10px 15px 20px;
+                            gap: 8px;
+                        }
+                        span{
+                            color: #050E25;
+                            font-family: "Tilda Sans";
+                            font-size: 21px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 90%; 
+                            @media (max-width:768px) {
+                                font-size: 18px;
+                            }
+                        }
+                        img{
+                            position: static;
+                        }
+                    }
+                }
+                textarea{
+                    height: 100%;
+                    @media (max-width:768px) {
+                        height: 240px;
+                    }
+                }
+                
+            }
+        }
+        .form_info{
+            font-family: 'Onest';
+            color: #969EAC;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%;
+            letter-spacing: -0.42px;
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+            @media (max-width:768px) {
+                font-weight: 500;
+                width: 100%;
+                text-align: center;
+            }
+            a{
+            color: #F3C733;
+
+            }
+        }
+        .form_img{
+            width: 50%;
+            position: relative;
+            @media (max-width:1120px) {
+                width: 100% ;
+                object-fit: contain;
+            }
+            .big_img{
+                position: absolute;
+                top: -208px;
+                left: -425px;
+                z-index: 3;
+                @media (max-width:1800px) {
+                    left: -490px;
+                }
+                @media (max-width:1650px) {
+                   width: 938px;
+                   top: -120px;
+                }
+                @media (max-width:1400px) {
+                    width: 600px;
+                    top: auto;
+                    left: -40%;
+                    bottom: 0;
+                }
+                @media (max-width:768px) {
+                    width: 100%;
+                }
+            }
+            .bg_img{
+                position:absolute;
+                right: -1px;
+                bottom: 0;
+                border-bottom-right-radius: 20px;
+                z-index: 2;
+                @media (max-width:1400px) {
+                   width: 100%;
+                }
+                @media (max-width:1120px) {
+                    position: static;
+                }
+                @media (max-width:556px) {
+                    bottom: -20px;
+                }
+            }
+        }
+    }
+}
+.bottom_wrapper{
+    overflow: hidden;
+}

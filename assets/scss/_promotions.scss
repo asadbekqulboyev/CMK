@@ -38,6 +38,11 @@
             cursor: pointer;
             position: relative;
             z-index: 9;
+            transition: all .2s linear;
+            border-radius: 50%;
+            &:hover{
+                opacity: .8;
+            }
             img{
                 @media (max-width:768px) {
                     width: 40px;
@@ -175,6 +180,10 @@
                 background: #F3C733;
                 width: 103px;
                 height: 103px;
+                transition: all .2s linear;
+                &:hover{
+                    transform: scale(.96);
+                }
                 @media (max-width:1655px) {
                     width: 93px;
                     height: 93px;   

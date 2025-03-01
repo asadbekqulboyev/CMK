@@ -1,14 +1,27 @@
 .about{
     margin-top: 97px;
+    @media (max-width:1120px) {
+        margin-top: 50px;
+    }
     .container{
         border-radius: 25px;
         background: #F5F5F5;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        padding-left: 152PX;
-        
+        .about_container{
+            max-width: 1518px;
+            margin:  0 auto;
+            @media (max-width:1650px) {
+                padding: 0 40px;
+            }
+            @media (max-width:1120px) {
+                padding: 40px 25px;
+            }
+        }        
     }
     &_info{
-        width: calc(40% - 33px);
+        width: calc(39% - 33px);
+        @media (max-width:1120px) {
+            width: 100%;
+          }
        .about_title{
         color: #17191C;
         font-family: "Tilda Sans";
@@ -16,15 +29,108 @@
         font-style: normal;
         font-weight: 900;
         line-height: 90%;
+        @media (max-width:1650px) {
+            font-size: 64px;
+        }
+        @media (max-width:1400px) {
+            font-size:46px;
+        }
+        @media (max-width:1120px) {
+            text-align: center;
+            font-size: 44px;
+            br{
+                display: none;
+            }
+        }
+        @media (max-width:1120px) {
+            font-size: 32px;
+        }
         span{
             color: #F3C733;
         }
        }
+       .about_bottom{
+        gap: 80px;
+        margin-top: 42px;
+        @media (max-width:1650px) {
+            gap: 34px;
+        }
+        @media (max-width:1650px) {
+            gap: 26px;
+            margin-top: 36px;
+        }
+        @media (max-width:1120px) {
+            margin-top: 10px;
+            gap: 25px;
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        @media (max-width:768px) {
+            gap: 10px;
+            align-items: center !important;
+        }
+       }
+       .btn_slide{
+        gap: 21px;
+        @media (max-width:1120px) {
+            width: 100%;
+            transform: scale(.6);
+            justify-content:center;
+        }
+       .btn_slideto{
+        cursor: pointer;
+        transition: all .2s linear;
+        border-radius: 50%;
+
+        &:hover{
+            opacity: .97;
+            transform: scale(.96);
+            box-shadow: 0 0 20px #00000019;
+        }
+       }
+        
+       }
+    }
+    .about_title_bottom{
+        color: #17191C;
+        font-family: "Tilda Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 115%;
+        @media (max-width:1650px) {
+            font-size: 18px;
+        }
+        @media (max-width:1400px) {
+            font-size: 17px;
+        }
+        @media (max-width:768px) {
+            font-size: 16px;
+            text-align: center;
+        }
     }
     .about_img{
-        width: calc(60% - 33px);
+        width: calc(61% - 33px);
         position: relative;
-        padding-right: 140px;
+        @media (max-width:1120px) {
+            margin-top: 20px;
+            width: 100%;
+        }
+        &:not(.mobiles){
+            @media (max-width:1120px) {
+                display: none;
+            }
+            &>img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &.mobiles{
+           display: none; 
+           @media (max-width:1120px) {
+            display: block;
+        }
+        }
     }
     .slide_about{
         width: 100%;
@@ -32,11 +138,60 @@
         top: 0;
         bottom: 0;
         margin: auto 0;
+        height: fit-content;
+        @media (max-width:1120px) {
+            position: static;
+        }
+        .slick-slide {
+            margin: 0 10px; /* Har ikki tomondan 10px => umumiy 20px */
+          }
+          .slick-list {
+            margin: 0 -10px; /* Slider chegaralarini to‘g‘rilash */
+          }
     }
     .slide_item{
-        padding: 60px;
+        padding:59px 60px;
         border-radius: 10px;
-background: #FFF;
-margin-right: 20px;
+        background: #FFF;
+        margin-right: 20px;
+        @media (max-width:1650px) {
+            padding:39px 40px;
+        }
+        @media (max-width:1400px) {
+            padding:29px 30px;
+        }
+        @media (max-width:1120px) {
+            padding:19px 20px;
+        }
+        .slide_img{
+            width: 100%;
+            object-fit: contain;
+        }
+        .slide_bottom{
+            margin-top: 49px;
+            .slide_name{
+                color: #050E25;
+                font-family: "Tilda Sans";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 25px;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+            }
+            .slide_sm_name{
+                color: #050E25;
+                font-family: "Tilda Sans";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                @media (max-width:1120px) {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
