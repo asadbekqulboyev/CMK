@@ -12,14 +12,13 @@ $(document).ready(function(){
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        autoplaySpeed: 3000
+        arrows: false
     });
-    $('.prev').click(function(){
+    $('.slide_btn.prev').click(function(){
         $('.slider').slick('slickPrev');
     });
     
-    $('.next').click(function(){
+    $('.slide_btn.next').click(function(){
         $('.slider').slick('slickNext');
     });
     $('.slider').on('afterChange', function(event, slick, currentSlide){
@@ -92,6 +91,7 @@ $(document).ready(function(){
     $(".exit_icon").click(function(){
         $('.modal').fadeOut()
         $('.modal_catalog').fadeOut()
+        $('.modal_quiz').fadeOut()
     })
     // btnlists
     $(".all_btn").on("click", function (e) {
@@ -136,11 +136,91 @@ $(document).ready(function(){
             $(".max_priceto").text(data.to.toLocaleString() + " руб.");
         }
     }).data("ionRangeSlider");
-
     // Dastlabki qiymatlarni to'g'irlash
     $(".min_priceto").text(slider2.result.from.toLocaleString() + " руб.");
     $(".max_priceto").text(slider2.result.to.toLocaleString() + " руб.");
+    // custom selct
+    $(document).ready(function(){
+        $(".select-box").click(function(){
+            $(this).next(".options").slideToggle();
+        });
+    
+        $(".option").click(function(){
+            $(this).parent('.options').prev('.select-box').children('.selected').val($(this).text());
+            console.log($(this).parents('.select-box').children('.selected'));
+            
+            $(".options").hide();
+        });
+    
+        $(document).click(function(e) {
+            if (!$(e.target).closest(".quiz_lists_select").length) {
+                $(".options").hide();
+            }
+        });
+    });
+    let currentIndex = 0;
+    let items = $(".quiz_content .quiz_item");
+    items.fadeOut();
+    items.first().fadeIn();
+    let prevBtn = $(".quiz_content .prev");
+    let nextBtn = $(".quiz_content .next");
+    let progressBar = $(".quiz_content .progress-bar");
+    let totalItems = items.length;
+    // progress update 
+    function updateProgress() {
+        let progress = ((currentIndex + 1) / totalItems) * 100;
+        progressBar.css("width", progress + "%");
+        if (currentIndex === totalItems - 1) {
+            nextBtn.attr("type", "submit");
+            nextBtn.children('span').text('Отправить')
+            $(".btn_save").fadeIn().css({display:'flex'})
+        } else {
+            nextBtn.attr("type", "button");
+            $(".btn_save").fadeOut()
+            nextBtn.children('span').text('Далее')
+        }
+    }
+    
+    function showItem(index) {
+        items.stop(true, true).fadeOut(300);
+        setTimeout(() => {
+            items.eq(index).stop(true, true).fadeIn(300);
+            prevBtn.show().css({display:'flex'});
+            if (index > 0) {
+                items.eq(index).find(".quiz_content .prev").hide();
+            }
+            updateProgress();
+        }, 300);
+    }
+    
+    items.eq(currentIndex).fadeIn(300);
+    updateProgress();
+    
+    nextBtn.click(function() {
+        if (currentIndex < items.length - 1) {
+            currentIndex++;
+            showItem(currentIndex);
+    $('.progress-text span').text(currentIndex+1)
+        }
+    });
+    
+    prevBtn.click(function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            showItem(currentIndex);
+    $('.progress-text span').text(currentIndex+1)
+        }
+    });
+    // cataloq quiz
+    $('.catalog_ral_item').click(function(e){
+        e.preventDefault()
+        $('.modal_quiz').fadeIn()
+    })
+    if(innerWidth>768){
+        $('.header .menu_text').text('Меню')
+    }else{
 
+    }
 })
 $(window).scroll(function(){
     if ($(window).scrollTop() >= 5) {

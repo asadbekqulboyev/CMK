@@ -6,6 +6,14 @@
     top: 20px;
     padding: 0 50px;
     transition: all .2s linear;
+    .menu_text{
+        color: #050E25;
+        font-family: "Tilda Sans";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
     &.active{
         top: 0px;
         .container{
