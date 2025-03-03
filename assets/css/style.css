@@ -481,6 +481,7 @@ main .hero_info {
   border-radius: 25px;
   background: #F3F5F6;
   position: relative;
+  overflow: hidden;
   z-index: 2;
 }
 main .hero_info .hero_info_img {
@@ -660,6 +661,7 @@ main .hero .slick-list.draggable {
 
 .sales {
   margin-top: 106px;
+  position: relative;
 }
 @media (max-width: 1140px) {
   .sales {
@@ -671,6 +673,7 @@ main .hero .slick-list.draggable {
   width: 120%;
   overflow: hidden;
   width: 100%;
+  white-space: nowrap;
 }
 @media (max-width: 1850px) {
   .sales .big_title {

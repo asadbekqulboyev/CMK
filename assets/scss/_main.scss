@@ -110,6 +110,7 @@ main {
             border-radius: 25px;
             background: #F3F5F6;
             position: relative;
+            overflow: hidden;
             z-index: 2;
             .hero_info_img{
                 position: absolute;

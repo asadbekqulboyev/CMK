@@ -216,11 +216,7 @@ $(document).ready(function(){
         e.preventDefault()
         $('.modal_quiz').fadeIn()
     })
-    if(innerWidth>768){
-        $('.header .menu_text').text('Меню')
-    }else{
-
-    }
+    
 })
 $(window).scroll(function(){
     if ($(window).scrollTop() >= 5) {
@@ -229,3 +225,8 @@ $(window).scroll(function(){
         $('.header').removeClass('active');
     }
 });
+if(innerWidth<768){
+    $('.header .menu_text').text('Меню')
+}else{
+    $('.header .menu_text').text('Каталог')
+}

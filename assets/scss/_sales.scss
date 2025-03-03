@@ -1,5 +1,6 @@
 .sales {
     margin-top: 106px;
+    position: relative;
     @media (max-width:1140px) {
         margin-top: 50px;
     }
@@ -8,6 +9,7 @@
         width: 120%;    
         overflow: hidden;
         width: 100%;
+        white-space: nowrap;
         @media (max-width:1850px) {
             font-size: 230px;
         }
