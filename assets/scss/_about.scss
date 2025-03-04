@@ -112,9 +112,11 @@
     .about_img{
         width: calc(61% - 33px);
         position: relative;
+        line-height: 0;
         @media (max-width:1120px) {
             margin-top: 20px;
             width: 100%;
+            
         }
         &:not(.mobiles){
             @media (max-width:1120px) {
@@ -154,6 +156,22 @@
         border-radius: 10px;
         background: #FFF;
         margin-right: 20px;
+        position: relative;
+        a{
+            position: relative;
+            .play_icon{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                z-index: 22;
+                display: block;
+                width: fit-content;
+                height: fit-content;
+            }
+        }
         @media (max-width:1650px) {
             padding:39px 40px;
         }

@@ -1743,6 +1743,7 @@ main .hero .slick-list.draggable {
 .about .about_img {
   width: calc(61% - 33px);
   position: relative;
+  line-height: 0;
 }
 @media (max-width: 1120px) {
   .about .about_img {
@@ -1791,6 +1792,22 @@ main .hero .slick-list.draggable {
   border-radius: 10px;
   background: #FFF;
   margin-right: 20px;
+  position: relative;
+}
+.about .slide_item a {
+  position: relative;
+}
+.about .slide_item a .play_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 22;
+  display: block;
+  width: fit-content;
+  height: fit-content;
 }
 @media (max-width: 1650px) {
   .about .slide_item {
@@ -2388,7 +2405,7 @@ main .hero .slick-list.draggable {
   .forms .container .form_img .big_img {
     width: 600px;
     top: auto;
-    left: -40%;
+    left: -28%;
     bottom: 0;
   }
 }
@@ -2411,12 +2428,14 @@ main .hero .slick-list.draggable {
 }
 @media (max-width: 1120px) {
   .forms .container .form_img .bg_img {
-    position: static;
+    width: 110%;
+    position: relative;
   }
 }
 @media (max-width: 556px) {
   .forms .container .form_img .bg_img {
     bottom: -20px;
+    left: -20px;
   }
 }
 
@@ -3334,6 +3353,11 @@ main .hero .slick-list.draggable {
   margin-top: 6px;
   font-weight: 700;
   line-height: 90%;
+}
+@media (max-width: 556px) {
+  .modal_quiz .banner_quiz .quiz_item:first-child .banner_arrow {
+    width: 60px;
+  }
 }
 .modal_quiz .quiz_content {
   width: calc(100% - 591px);

@@ -115,6 +115,13 @@
                     line-height: 90%;
                 }
             }
+            &:first-child{
+                .banner_arrow{
+                    @media (max-width:556px) {
+                        width: 60px;
+                    }
+                }
+            }
             
         }
     }
