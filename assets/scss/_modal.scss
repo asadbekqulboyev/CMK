@@ -1,17 +1,22 @@
+.fancybox-bg {
+    background:#f3c633e9;
+    backdrop-filter: blur(10px);
+}
+.fancybox-slide--html .fancybox-close-small {
+    display: none !important;
+}
 .modal{
     position: fixed;
-    z-index: 1111;
-    background: #f3c63355;
+    z-index: 99999 ;
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
     overflow-y: auto;
     padding-bottom: 30px;
-    backdrop-filter: blur(10px);
+    background: #F3C733;
     padding: 20px;
-    display: none;
-    
+    backdrop-filter: blur(10px);
     .container{
         padding-top: 90px;
     }

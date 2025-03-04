@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -74,7 +75,7 @@
             </div>
          </header>
          <!-- main -->
-          <main>
+        <main>
             <!-- hero -->
             <section class="hero">
                 <div class="container flex between">
@@ -115,7 +116,7 @@
                             <div class="bottom_info">
                                 Идеальное <br> соотношение <br> цены и качества
                             </div>
-                            <a href="#" class="hero_button button catalog">
+                            <a href="#modal" data-fancybox   class="hero_button  button catalog">
                                 <span>Рассчитать стоимость</span>
                                 <img src="assets/images/hero_arrow_btn.svg" alt="">
                             </a>
@@ -895,7 +896,7 @@
                 </div>
             </section>
         </main>
-            <section class="bottom_wrapper">
+        <section class="bottom_wrapper">
             <section class="forms">
                 <div class="container flex between">
                     <div class="form_content">
@@ -996,59 +997,57 @@
                     </div>
                 </div>
              </footer>
-            </section>
-    </div>     
-    <div class="modal">
-        <div class="modal_content">
-            <section class="forms">
-                <div class="container flex between">
-                    <div class="exit_icon">
-                        +
-                    </div>
-                    <div class="form_content">
-                        <h2 class="section_title">Напишите нам и наши специалисты будут рады вас проконсультировать</h2>
-                        <div class="big_title">
-                            СМК
+        </section>
+         </div>
+        <!-- Modal oynasi -->
+        <div class="modal hidden_modal" id="modal" style="display: none;">
+                <div class="modal_content">
+                    <section class="forms">
+                        <div class="container flex between">
+                            <div class="exit_icon" onclick="$.fancybox.close();">+</div>
+                            <div class="form_content">
+                                <h2 class="section_title">Напишите нам и наши специалисты будут рады вас проконсультировать</h2>
+                                <div class="big_title">СМК</div>
+                                <form action="" class="flex between">
+                                    <div class="form_item">
+                                        <label>
+                                            <img src="assets/images/sms_icon.svg" alt="">
+                                            <textarea name="message" id="message" placeholder="Ваш вопрос"></textarea>
+                                        </label>
+                                    </div>
+                                    <div class="form_item flex column">
+                                        <label>
+                                            <img src="assets/images/name_icon.svg" alt="">
+                                            <input type="text" name="first_name" id="first_name" placeholder="Ваше имя">
+                                        </label>
+                                        <label>
+                                            <img src="assets/images/tel.svg" alt="">
+                                            <input type="tel" name="phone" id="phone" placeholder="+7 (___)-___-__---">
+                                        </label>
+                                        <button class="button catalog">
+                                            <span>Задать свой вопрос</span>
+                                            <img src="assets/images/hero_arrow_btn.svg" alt="">
+                                        </button>
+                                    </div>
+                                </form>
+                                <p class="form_info">
+                                    Нажимая на кнопку, “Задать свой вопрос” вы даете согласие <a href="#">на обработку персональных данных и соглашаетесь c политикой конфиденциальности</a>
+                                </p>
+                            </div>
+                            <div class="form_img">
+                                <img src="assets/images/big_img.png" alt="" class="big_img">
+                                <img src="assets/images/bg_img.png" alt="" class="bg_img">
+                            </div>
                         </div>
-                        <form action="" class="flex between">
-                            <div class="form_item">
-                                <label>
-                                    <img src="assets/images/sms_icon.svg" alt="">
-                                    <textarea name="message" id="message" placeholder="Ваш вопрос"></textarea>
-                                </label>
-                            </div>
-                            <div class="form_item flex column">
-                                <label>
-                                    <img src="assets/images/name_icon.svg" alt="">
-                                    <input type="text" name="first_name" id="first_name" placeholder="Ваше имя">
-                                </label>
-                                <label>
-                                    <img src="assets/images/tel.svg" alt="">
-                                    <input type="tel" name="phone" id="phone" placeholder="+7 (___)-___-__---">
-                                </label>
-                                <button class="button catalog">
-                                    <span>Задать свой вопрос</span>
-                                    <img src="assets/images/hero_arrow_btn.svg" alt="">
-                                </button>
-                            </div>
-                        </form>
-                        <p class="form_info">
-                            Нажимая на кнопку, “Задать свой вопрос”вы даете согласие <a href="#">на обработку
-                                персональных данных и соглашаетесь c политикой конфиденциальности</a>
-                        </p>
-                    </div>
-                    <div class="form_img">
-                        <img src="assets/images/big_img.png" alt="" class="big_img">
-                        <img src="assets/images/bg_img.png" alt="" class="bg_img">
-                    </div>
+                    </section>
                 </div>
-            </section>
         </div>
-    </div> 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="assets/js/pro.js"></script> 
 </body>
 </html>

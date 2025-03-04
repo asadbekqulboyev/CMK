@@ -3368,6 +3368,12 @@ main .hero .slick-list.draggable {
     width: 100%;
   }
 }
+.modal_quiz .quiz_content .icon_option {
+  width: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
 .modal_quiz .quiz_content .quiz_lists {
   padding-bottom: 150px;
 }
@@ -3404,9 +3410,6 @@ main .hero .slick-list.draggable {
   .modal_quiz .quiz_content .quiz_item.item2 .quiz_change_items .quiz_change_item {
     width: 100%;
   }
-}
-.modal_quiz .quiz_content .quiz_item.item2 .quiz_lists_title {
-  gap: 5px;
 }
 @media (max-width: 1650px) {
   .modal_quiz .quiz_content .quiz_item.item1 .quiz_lists_select {
@@ -3460,7 +3463,7 @@ main .hero .slick-list.draggable {
   text-align: center;
 }
 .modal_quiz .quiz_content .quiz_lists_title {
-  font-size: 54px;
+  font-size: 52px;
   font-style: normal;
   font-weight: 900;
   gap: 49px;
@@ -3934,19 +3937,27 @@ main .hero .slick-list.draggable {
   transform: scale(0.96);
 }
 
+.fancybox-bg {
+  background: rgba(243, 198, 51, 0.9137254902);
+  backdrop-filter: blur(10px);
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  display: none !important;
+}
+
 .modal {
   position: fixed;
-  z-index: 1111;
-  background: rgba(243, 198, 51, 0.3333333333);
+  z-index: 99999;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
   overflow-y: auto;
   padding-bottom: 30px;
-  backdrop-filter: blur(10px);
+  background: #F3C733;
   padding: 20px;
-  display: none;
+  backdrop-filter: blur(10px);
 }
 .modal .container {
   padding-top: 90px;

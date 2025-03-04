@@ -79,15 +79,32 @@ $(document).ready(function(){
     // forms
     $("input[type=tel]").inputmask("+7 (999)-999-99-99");
     // modal
-    $('.hero_button ').click(function (e) {
-        e.preventDefault()
-        $('.modal').fadeIn()
-      })
-    
-    $(".exit_icon").click(function(){
-        $('.modal').fadeOut()
-        $('.modal_quiz').fadeOut()
-    })
+    // $('.hero_button ').click(function (e) {
+    //     e.preventDefault()
+    //     $('.modal').fadeIn()
+    //   })
+    if($('.hero_button')){
+        
+        $('.hero_button').fancybox({
+            touch: false, 
+            autoFocus: false,  
+            closeExisting: true, 
+            clickSlide: "close",  
+            clickOutside: "close", 
+            animationEffect: "fade"
+           
+        });
+    }
+    $('.catalog_ral_item').fancybox({
+        src: ".modal_quiz",      
+        type: "inline",     
+        touch: false,   
+        autoFocus: false,        
+        closeExisting: true,   
+        clickSlide: "close",  
+        clickOutside: "close",   
+        animationEffect: "fade", 
+    });
     // btnlists
     $(".all_btn").on("click", function (e) {
         e.preventDefault()
@@ -96,26 +113,29 @@ $(document).ready(function(){
         $(this).text(text);
     });
     // price
-    let slider = $("#price_slider").ionRangeSlider({
-        skin: "flat",
-        type: "double",
-        min: 0,
-        max: 1500000,
-        from: 0,
-        to: 1200000,
-        grid: false,
-        hide_min_max: true,
-        hide_from_to: true,
-        onChange: function (data) {
-            $(".min_price").text(data.from.toLocaleString() + " руб.");
-            $(".max_price").text(data.to.toLocaleString() + " руб.");
-        }
-    }).data("ionRangeSlider");
+    if($('.price_slider').length ){
 
-    // Dastlabki qiymatlarni to'g'irlash
-    $(".min_price").text(slider.result.from.toLocaleString() + " руб.");
-    $(".max_price").text(slider.result.to.toLocaleString() + " руб.");
-
+        let slider = $("#price_slider").ionRangeSlider({
+            skin: "flat",
+            type: "double",
+            min: 0,
+            max: 1500000,
+            from: 0,
+            to: 1200000,
+            grid: false,
+            hide_min_max: true,
+            hide_from_to: true,
+            onChange: function (data) {
+                $(".min_price").text(data.from.toLocaleString() + " руб.");
+                $(".max_price").text(data.to.toLocaleString() + " руб.");
+            }
+        }).data("ionRangeSlider");
+    
+        // Dastlabki qiymatlarni to'g'irlash
+        $(".min_price").text(slider.result.from.toLocaleString() + " руб.");
+        $(".max_price").text(slider.result.to.toLocaleString() + " руб.");
+    }
+    if($('#price_slider_to').length ){
     let slider2 = $("#price_slider_to").ionRangeSlider({
         skin: "flat",
         type: "double",
@@ -132,27 +152,59 @@ $(document).ready(function(){
         }
     }).data("ionRangeSlider");
     // Dastlabki qiymatlarni to'g'irlash
+    if( $(".min_priceto")){
     $(".min_priceto").html(slider2.result.from.toLocaleString() + "м<sup>2</sup>");
     $(".max_priceto").html(slider2.result.to.toLocaleString() + "м<sup>2</sup>");
+}
+
+    }
     // custom selct
+    // $(document).ready(function(){
+    //     // Sahifa yuklanganda birinchi option elementining background rangini .bg ga o'rnatish
+    //     var firstOptionBg = $(".options .icon_option").css("background-color");
+    //     $(".bg").css("background-color", firstOptionBg);
+    
+    //     $(".select-box").click(function(){
+    //         $(this).next(".options").slideToggle();
+    //     });
+    
+    //     $(".option").click(function(){
+    //         $(this).parent('.options').prev('.select-box').children('.selected').val($(this).text());
+    //         console.log($(this).parents('.select-box').children('.selected'));
+    //         $(".options").hide();
+    //     });
+    
+    //     $(document).click(function(e) {
+    //         if (!$(e.target).closest(".quiz_lists_select").length) {
+    //             $(".options").hide();
+    //         }
+    //     });
+    // });
     $(document).ready(function(){
-        $(".select-box").click(function(){
-            $(this).next(".options").slideToggle();
-        });
-    
-        $(".option").click(function(){
-            $(this).parent('.options').prev('.select-box').children('.selected').val($(this).text());
-            console.log($(this).parents('.select-box').children('.selected'));
-            
-            $(".options").hide();
-        });
-    
-        $(document).click(function(e) {
-            if (!$(e.target).closest(".quiz_lists_select").length) {
-                $(".options").hide();
-            }
-        });
+    $(".select-box").click(function(){
+        $(this).next(".options").slideToggle();
     });
+
+    $(".option").click(function(){
+        // Tanlangan option ichidagi text va icon_option elementining background rangini olish
+        var selectedText = $(this).find("span:nth-child(2)").text();
+        var selectedColor = $(this).find(".icon_option").css("background-color");
+        
+        // .selected inputga tanlangan option textini berish
+        $(this).parent('.options').prev('.select-box').children('.selected').val(selectedText);
+        
+        // Tanlangan optiondagi icon_option background rangini .bg ga berish
+        $(this).parent('.options').prev('.select-box').children('.bg').css("background", selectedColor);
+        
+        $(".options").hide();
+    });
+
+    $(document).click(function(e) {
+        if (!$(e.target).closest(".quiz_select").length) {
+            $(".options").hide();
+        }
+    });
+})
     let currentIndex = 0;
     let items = $(".quiz_content .quiz_item");
     items.fadeOut();
@@ -207,10 +259,10 @@ $(document).ready(function(){
         }
     });
     // cataloq quiz
-    $('.catalog_ral_item').click(function(e){
-        e.preventDefault()
-        $('.modal_quiz').fadeIn()
-    })
+    // $('.catalog_ral_item').click(function(e){
+    //     e.preventDefault()
+    //     $('.modal_quiz').fadeIn()
+    // })
     
 })
 $(window).scroll(function(){
