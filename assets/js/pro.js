@@ -125,20 +125,20 @@ $(document).ready(function(){
         skin: "flat",
         type: "double",
         min: 0,
-        max: 1500000,
+        max: 200,
         from:0,
-        to: 1200000,
+        to: 150,
         grid: false,
         hide_min_max: true,
         hide_from_to: true,
         onChange: function (data) {
-            $(".min_priceto").text(data.from.toLocaleString() + " руб.");
-            $(".max_priceto").text(data.to.toLocaleString() + " руб.");
+            $(".min_priceto").html(data.from.toLocaleString() + "м<sup>2</sup>");
+            $(".max_priceto").html(data.to.toLocaleString() + "м<sup>2</sup>");
         }
     }).data("ionRangeSlider");
     // Dastlabki qiymatlarni to'g'irlash
-    $(".min_priceto").text(slider2.result.from.toLocaleString() + " руб.");
-    $(".max_priceto").text(slider2.result.to.toLocaleString() + " руб.");
+    $(".min_priceto").html(slider2.result.from.toLocaleString() + "м<sup>2</sup>");
+    $(".max_priceto").html(slider2.result.to.toLocaleString() + "м<sup>2</sup>");
     // custom selct
     $(document).ready(function(){
         $(".select-box").click(function(){
