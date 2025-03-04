@@ -4014,46 +4014,29 @@ main .hero .slick-list.draggable {
   }
 }
 
-.modal_catalog {
-  backdrop-filter: blur(10px);
-  background: rgba(243, 198, 51, 0.3333333333);
-  position: fixed;
-  z-index: 1111;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  padding: 20px;
+.catalog_page::-webkit-scrollbar {
   display: none;
 }
-.modal_catalog::-webkit-scrollbar {
-  display: none;
-}
-.modal_catalog .container {
+.catalog_page .container {
   position: relative;
   border-radius: 25px;
   background: #F3F5F6;
-  padding: 92px 20px 66px 84px;
+  padding: 32px 125px 66px 84px;
 }
 @media (max-width: 1200px) {
-  .modal_catalog .container {
-    padding: 92px 20px 66px 24px;
+  .catalog_page .container {
+    padding: 32px 20px 66px 24px;
   }
 }
 @media (max-width: 768px) {
-  .modal_catalog .container {
+  .catalog_page .container {
     padding-top: 46px;
   }
 }
-.modal_catalog .form_input.hidden {
+.catalog_page .form_input.hidden {
   display: none;
 }
-.modal_catalog .form_input input[type=radio] {
-  opacity: 0;
-  position: absolute;
-}
-.modal_catalog .form_input .chech_btn {
+.catalog_page .form_input .chech_btn {
   width: 100%;
   border-radius: 25px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -4070,44 +4053,45 @@ main .hero .slick-list.draggable {
   font-weight: 500;
   line-height: normal;
   cursor: pointer;
+  transition: all 0.2s linear;
 }
 @media (max-width: 768px) {
-  .modal_catalog .form_input .chech_btn {
+  .catalog_page .form_input .chech_btn {
     border-radius: 16px;
     padding: 15px 20px;
     font-size: 14px;
   }
 }
 @media (max-width: 768px) {
-  .modal_catalog .form_input .chech_btn sup {
+  .catalog_page .form_input .chech_btn sup {
     font-size: 12px;
     margin-top: -5px;
   }
 }
-.modal_catalog .form_input input[type=radio]:checked ~ .chech_btn {
+.catalog_page .form_input .chech_btn:hover {
   background: #F3C733;
 }
-.modal_catalog .form_item {
+.catalog_page .form_item {
   width: calc(33.33% - 51px);
   gap: 56px 0;
 }
 @media (max-width: 1200px) {
-  .modal_catalog .form_item {
+  .catalog_page .form_item {
     width: calc(33.33% - 11px);
   }
 }
 @media (max-width: 1120px) {
-  .modal_catalog .form_item {
+  .catalog_page .form_item {
     width: calc(50% - 11px);
   }
 }
 @media (max-width: 768px) {
-  .modal_catalog .form_item {
+  .catalog_page .form_item {
     width: 100%;
     gap: 35px;
   }
 }
-.modal_catalog .form_item .form_input_title {
+.catalog_page .form_item .form_input_title {
   color: #050E25;
   font-family: "Tilda Sans";
   font-size: 18px;
@@ -4116,7 +4100,7 @@ main .hero .slick-list.draggable {
   line-height: normal;
   width: 100%;
 }
-.modal_catalog .form_item .all_btn {
+.catalog_page .form_item .all_btn {
   color: #3E6B94;
   text-align: center;
   font-family: "Tilda Sans";
@@ -4133,22 +4117,22 @@ main .hero .slick-list.draggable {
   width: 100%;
   display: block;
 }
-.modal_catalog .form_item .form_content.size {
+.catalog_page .form_item .form_content.size {
   justify-content: space-between;
 }
-.modal_catalog .form_item .form_content.size .form_input {
+.catalog_page .form_item .form_content.size .form_input {
   width: calc(25% - 6px);
 }
-.modal_catalog .form_item .form_content.exterer {
+.catalog_page .form_item .form_content.exterer {
   gap: 18px 0;
 }
-.modal_catalog .form_item .form_content.exterer .form_input {
+.catalog_page .form_item .form_content.exterer .form_input {
   width: calc(50% - 6px);
 }
-.modal_catalog .form_content {
+.catalog_page .form_content {
   gap: 19px 0;
 }
-.modal_catalog .price_range {
+.catalog_page .price_range {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4156,10 +4140,10 @@ main .hero .slick-list.draggable {
   position: relative;
   flex-wrap: wrap;
 }
-.modal_catalog .price_range .flex {
+.catalog_page .price_range .flex {
   width: 100%;
 }
-.modal_catalog .price_label {
+.catalog_page .price_label {
   background-color: #f4c030;
   padding: 15px 21px;
   border-radius: 20px;
@@ -4176,18 +4160,18 @@ main .hero .slick-list.draggable {
   border-radius: 20px;
   background: #F3C733;
 }
-.modal_catalog .slider_container {
+.catalog_page .slider_container {
   flex-grow: 1;
   margin: 0 10px;
 }
-.modal_catalog .irs {
+.catalog_page .irs {
   width: 100%;
 }
-.modal_catalog .irs--flat .irs-bar {
+.catalog_page .irs--flat .irs-bar {
   background: #F3C733;
   height: 1px;
 }
-.modal_catalog .irs--flat .irs-handle {
+.catalog_page .irs--flat .irs-handle {
   background-color: #fff;
   border: 2px solid #F3C733;
   width: 18px;
@@ -4196,10 +4180,10 @@ main .hero .slick-list.draggable {
   top: 16px;
   cursor: pointer;
 }
-.modal_catalog .irs--flat .irs-handle i {
+.catalog_page .irs--flat .irs-handle i {
   background-color: #fff !important;
 }
-.modal_catalog .irs-line {
+.catalog_page .irs-line {
   background: #DFDFDF;
   height: 1px;
 }

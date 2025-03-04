@@ -83,14 +83,9 @@ $(document).ready(function(){
         e.preventDefault()
         $('.modal').fadeIn()
       })
-      $('.catalog_form ').click(function (e) {
-        e.preventDefault()
-        $('.modal_catalog').fadeIn()
-      })
     
     $(".exit_icon").click(function(){
         $('.modal').fadeOut()
-        $('.modal_catalog').fadeOut()
         $('.modal_quiz').fadeOut()
     })
     // btnlists
