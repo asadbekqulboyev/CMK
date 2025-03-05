@@ -4128,6 +4128,19 @@ main .hero .slick-list.draggable {
   width: 100%;
   display: block;
 }
+@media (max-width: 768px) {
+  .catalog_page .form_item .form_content.desctop {
+    display: none;
+  }
+}
+.catalog_page .form_item .form_content.mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .catalog_page .form_item .form_content.mobile {
+    display: flex;
+  }
+}
 .catalog_page .form_item .form_content.size {
   justify-content: space-between;
 }

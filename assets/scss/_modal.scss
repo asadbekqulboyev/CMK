@@ -177,6 +177,17 @@
             display: block;
             
         }
+        .form_content.desctop{
+            @media (max-width:768px) {
+                display: none;
+            }
+        }
+        .form_content.mobile{
+            display: none;
+            @media (max-width:768px) {
+                display: flex;
+            }
+        }
         .form_content.size{
             justify-content: space-between;
             .form_input{

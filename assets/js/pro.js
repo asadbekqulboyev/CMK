@@ -84,7 +84,7 @@ $(document).ready(function(){
     //     $('.modal').fadeIn()
     //   })
     if($('.hero_button')){
-        
+
         $('.hero_button').fancybox({
             touch: false, 
             autoFocus: false,  
@@ -113,28 +113,54 @@ $(document).ready(function(){
         $(this).text(text);
     });
     // price
-    if($('.price_slider').length ){
-
-        let slider = $("#price_slider").ionRangeSlider({
-            skin: "flat",
-            type: "double",
-            min: 0,
-            max: 1500000,
-            from: 0,
-            to: 1200000,
-            grid: false,
-            hide_min_max: true,
-            hide_from_to: true,
-            onChange: function (data) {
-                $(".min_price").text(data.from.toLocaleString() + " руб.");
-                $(".max_price").text(data.to.toLocaleString() + " руб.");
-            }
-        }).data("ionRangeSlider");
+    // if($('.price_range').length ){
+    //     let slider = $("#price_slider").ionRangeSlider({
+    //         skin: "flat",
+    //         type: "double",
+    //         min: 0,
+    //         max: 1500000,
+    //         from: 0,
+    //         to: 1200000,
+    //         grid: false,
+    //         hide_min_max: true,
+    //         hide_from_to: true,
+    //         onChange: function (data) {
+    //             $(".min_price").text(data.from.toLocaleString() + " руб.");
+    //             $(".max_price").text(data.to.toLocaleString() + " руб.");
+    //         }
+    //     }).data("ionRangeSlider");
+    //     // Dastlabki qiymatlarni to'g'irlash
+    //     $(".min_price").text(slider.result.from.toLocaleString() + " руб.");
+    //     $(".max_price").text(slider.result.to.toLocaleString() + " руб.");
+    // }
+    if ($('.price_range').length) {
+        function initSlider(sliderId, minLabel, maxLabel) {
+            let slider = $(sliderId).ionRangeSlider({
+                skin: "flat",
+                type: "double",
+                min: 0,
+                max: 1500000,
+                from: 0,
+                to: 1200000,
+                grid: false,
+                hide_min_max: true,
+                hide_from_to: true,
+                onChange: function (data) {
+                    $(minLabel).text(data.from.toLocaleString() + " руб.");
+                    $(maxLabel).text(data.to.toLocaleString() + " руб.");
+                }
+            }).data("ionRangeSlider");
     
-        // Dastlabki qiymatlarni to'g'irlash
-        $(".min_price").text(slider.result.from.toLocaleString() + " руб.");
-        $(".max_price").text(slider.result.to.toLocaleString() + " руб.");
+            // Dastlabki qiymatlarni o‘rnatish
+            $(minLabel).text(slider.result.from.toLocaleString() + " руб.");
+            $(maxLabel).text(slider.result.to.toLocaleString() + " руб.");
+        }
+        // 1-sliderni ishga tushirish
+        initSlider("#price_slider1", ".min_price1", ".max_price1");
+        // 2-sliderni ishga tushirish
+        initSlider("#price_slider2", ".min_price2", ".max_price2");
     }
+    
     if($('#price_slider_to').length ){
     let slider2 = $("#price_slider_to").ionRangeSlider({
         skin: "flat",
