@@ -48,9 +48,9 @@ $(document).ready(function(){
         autoplaySpeed: 3000,
         responsive: [
             {
-              breakpoint: 1120, // Ekran 1120px dan kichik bo‘lsa
+              breakpoint: 1120, 
               settings: {
-                slidesToShow: 1 // 1 ta slayd ko‘rsatish
+                slidesToShow: 1
               }
             }
           ]
@@ -67,8 +67,6 @@ $(document).ready(function(){
     $(".faq_header").on("click", function () {
         let item = $(this).parent(); 
         let body = $(this).next(".faq_description");
-        // $(".faq_description").slideUp()
-        // $(".faq_description:first").slideDown()
         if (item.hasClass("active")) {
             item.removeClass("active");
         } else {
@@ -79,12 +77,7 @@ $(document).ready(function(){
     // forms
     $("input[type=tel]").inputmask("+7 (999)-999-99-99");
     // modal
-    // $('.hero_button ').click(function (e) {
-    //     e.preventDefault()
-    //     $('.modal').fadeIn()
-    //   })
     if($('.hero_button')){
-
         $('.hero_button').fancybox({
             touch: false, 
             autoFocus: false,  
@@ -113,26 +106,6 @@ $(document).ready(function(){
         $(this).text(text);
     });
     // price
-    // if($('.price_range').length ){
-    //     let slider = $("#price_slider").ionRangeSlider({
-    //         skin: "flat",
-    //         type: "double",
-    //         min: 0,
-    //         max: 1500000,
-    //         from: 0,
-    //         to: 1200000,
-    //         grid: false,
-    //         hide_min_max: true,
-    //         hide_from_to: true,
-    //         onChange: function (data) {
-    //             $(".min_price").text(data.from.toLocaleString() + " руб.");
-    //             $(".max_price").text(data.to.toLocaleString() + " руб.");
-    //         }
-    //     }).data("ionRangeSlider");
-    //     // Dastlabki qiymatlarni to'g'irlash
-    //     $(".min_price").text(slider.result.from.toLocaleString() + " руб.");
-    //     $(".max_price").text(slider.result.to.toLocaleString() + " руб.");
-    // }
     if ($('.price_range').length) {
         function initSlider(sliderId, minLabel, maxLabel) {
             let slider = $(sliderId).ionRangeSlider({
@@ -150,14 +123,12 @@ $(document).ready(function(){
                     $(maxLabel).text(data.to.toLocaleString() + " руб.");
                 }
             }).data("ionRangeSlider");
-    
-            // Dastlabki qiymatlarni o‘rnatish
             $(minLabel).text(slider.result.from.toLocaleString() + " руб.");
             $(maxLabel).text(slider.result.to.toLocaleString() + " руб.");
         }
-        // 1-sliderni ishga tushirish
+        // 1-slider
         initSlider("#price_slider1", ".min_price1", ".max_price1");
-        // 2-sliderni ishga tushirish
+        // 2-slider
         initSlider("#price_slider2", ".min_price2", ".max_price2");
     }
     
@@ -177,7 +148,6 @@ $(document).ready(function(){
             $(".max_priceto").html(data.to.toLocaleString() + "м<sup>2</sup>");
         }
     }).data("ionRangeSlider");
-    // Dastlabki qiymatlarni to'g'irlash
     if( $(".min_priceto")){
     $(".min_priceto").html(slider2.result.from.toLocaleString() + "м<sup>2</sup>");
     $(".max_priceto").html(slider2.result.to.toLocaleString() + "м<sup>2</sup>");
@@ -185,41 +155,15 @@ $(document).ready(function(){
 
     }
     // custom selct
-    // $(document).ready(function(){
-    //     // Sahifa yuklanganda birinchi option elementining background rangini .bg ga o'rnatish
-    //     var firstOptionBg = $(".options .icon_option").css("background-color");
-    //     $(".bg").css("background-color", firstOptionBg);
-    
-    //     $(".select-box").click(function(){
-    //         $(this).next(".options").slideToggle();
-    //     });
-    
-    //     $(".option").click(function(){
-    //         $(this).parent('.options').prev('.select-box').children('.selected').val($(this).text());
-    //         console.log($(this).parents('.select-box').children('.selected'));
-    //         $(".options").hide();
-    //     });
-    
-    //     $(document).click(function(e) {
-    //         if (!$(e.target).closest(".quiz_lists_select").length) {
-    //             $(".options").hide();
-    //         }
-    //     });
-    // });
     $(document).ready(function(){
     $(".select-box").click(function(){
         $(this).next(".options").slideToggle();
     });
 
     $(".option").click(function(){
-        // Tanlangan option ichidagi text va icon_option elementining background rangini olish
         var selectedText = $(this).find("span:nth-child(2)").text();
         var selectedColor = $(this).find(".icon_option").css("background-color");
-        
-        // .selected inputga tanlangan option textini berish
         $(this).parent('.options').prev('.select-box').children('.selected').val(selectedText);
-        
-        // Tanlangan optiondagi icon_option background rangini .bg ga berish
         $(this).parent('.options').prev('.select-box').children('.bg').css("background", selectedColor);
         
         $(".options").hide();
@@ -230,7 +174,7 @@ $(document).ready(function(){
             $(".options").hide();
         }
     });
-})
+    })
     let currentIndex = 0;
     let items = $(".quiz_content .quiz_item");
     items.fadeOut();
@@ -239,7 +183,6 @@ $(document).ready(function(){
     let nextBtn = $(".quiz_content .next");
     let progressBar = $(".quiz_content .progress-bar");
     let totalItems = items.length;
-    // progress update 
     function updateProgress() {
         let progress = ((currentIndex + 1) / totalItems) * 100;
         progressBar.css("width", progress + "%");
@@ -284,11 +227,6 @@ $(document).ready(function(){
     $('.progress-text span').text(currentIndex+1)
         }
     });
-    // cataloq quiz
-    // $('.catalog_ral_item').click(function(e){
-    //     e.preventDefault()
-    //     $('.modal_quiz').fadeIn()
-    // })
     
 })
 $(window).scroll(function(){
